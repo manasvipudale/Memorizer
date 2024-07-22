@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer and Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div >
+        <div class="container">
+            <h1>Memorizer</h1>
+    
+            <!-- Text Summarizer Section -->
+            <textarea id="chapter_text" placeholder="Enter chapter text here..."></textarea>
+            <input type="number" id="ratio" placeholder="Summarization ratio (e.g., 0.2)" step="0.01" min="0" max="1" value="0.2">
+            <button id="summarize_btn">Summarize</button>
+            <div id="summary_output"></div>
+            <button id="generate_image_btn">Generate Image from Summary</button>
+            <div id="image_container">
+                <img id="summary_image" src="" alt="Summary Image" style="display:none;">
+            </div>
+    
+            <!-- Quiz Section -->
+            <button id="generate_quiz_btn">Generate Quiz</button>
+            <div id="quiz_container" style="display: none;">
+                <form id="quiz_form"></form>
+                <button id="submit_quiz_btn" style="display: none;">Submit Answers</button>
+            </div>
+            <div id="results_container"></div>
+        </div>
+        <script src="/static/script.js"></script>
+    </div>
+
+</body>
+</html>
